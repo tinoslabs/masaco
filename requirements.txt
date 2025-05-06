@@ -1,0 +1,9 @@
+﻿# Deployment
+Django==5.0.6
+gunicorn==22.0.0
+
+
+# Other
+django-ckeditor==6.7.2
+pillow==11.1.0
+whitenoise==6.7.0

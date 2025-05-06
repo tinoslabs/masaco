@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+    <!-- popup search -->
+    <div class="search-popup">
+        <button class="close-search"><span class="far fa-times"></span></button>
+        <form action="#">
+            <div class="form-group">
+                <input type="search" name="search-field" class="form-control" placeholder="Search Here..." required>
+                <button type="submit"><i class="far fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- popup search end -->
+
+
+    <!-- sidebar-popup -->
+    <div class="sidebar-popup offcanvas offcanvas-end" tabindex="-1" id="sidebarPopup">
+        <div class="offcanvas-header">
+            <a href="index.html" class="sidebar-popup-logo">
+                <img src="assets/img/logo/logo-1.png" alt="">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="far fa-xmark"></i>
+            </button>
+        </div>
+        <div class="sidebar-popup-wrap offcanvas-body">
+            <div class="sidebar-popup-content">
+                <div class="sidebar-popup-about">
+                    <h4>About Us</h4>
+                    <p>Masaco global has a four-decade-long track record of it's parent company</p>
+                </div>
+                <div class="sidebar-popup-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-envelope"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Email</h6>
+                                <a href="mailto:info@masacoglobal.com">info@masacoglobal.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-phone"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Phone</h6>
+                                <a href="tel:+91 9895927770">+91 9895927770
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-location-dot"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Address 1</h6>
+                                <a href="{% url 'contact' %}">KOCHI: Palal Tower, MG Road, Ernakulam, Kerala 682015<br>
+                                </a>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-location-dot"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Address 2</h6>
+                                <a href="{% url 'contact' %}">KOTTAYAM: Srinikethan GALLERIA, First floor,  Changanassery<br>
+                                </a>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-location-dot"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Address 3</h6>
+                                <a href="{% url 'contact' %}">DUBAI: Academic City, Building No.12, Office 306, UAE<br>
+                                </a>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-popup-social">
+                    <h4>Follow Us</h4>
+                    <a href="https://www.facebook.com/masaco.global/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@masaco.global"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/masaco.global/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/eduomania?originalSubdomain=in"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar-popup end -->
+
+
+    <main class="main">
+
+        <!-- breadcrumb -->
+        <div class="site-breadcrumb" style="background: url('{% static "assets/img/breadcrumb/01.jpg" %}')">
+            <div class="container">
+                <h2 class="breadcrumb-title">Country Details</h2>
+                <ul class="breadcrumb-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Country Details</li>
+                </ul>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+
+
+        <!-- country-single -->
+        <div class="country-single py-100">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="country-sidebar">
+                            <div class="widget">
+                                <h4 class="title">All Countries</h4>
+                                <div class="country-list">
+                                    {% for item in all_countries %}
+                                        <a href="{% url 'country_details' item.id %}" class="list-item">
+                                            <div class="list-content">
+                                                {% if item.country_logo %}
+                                                    <img src="{{ item.country_logo.url }}" alt="{{ item.country_name }}">
+                                                {% else %}
+                                                    <img src="{% static 'assets/img/country/default.png' %}" alt="Default">
+                                                {% endif %}
+                                                <span>{{ item.country_name }}</span>
+                                            </div>
+                                            <div class="list-icon">
+                                                <i class="far fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        
+                            <div class="widget">
+                                <h4 class="title">Downloads</h4>
+                                <div class="download-list">
+                                    {% if country.country_pdf %}
+                                        <a href="{{ country.country_pdf.url }}" class="theme-btn" download>
+                                            <span class="far fa-file-pdf"></span>Download PDF
+                                        </a>
+                                    {% else %}
+                                        <p>No brochure available.</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="country-banner" style="background-image: url('{% static "assets/img/banner.jpg" %}')">
+                                <div class="banner-content">
+                                    <span>Know More</span>
+                                    <h1>Contact Us</h1>
+                                    <a href="{% url 'contact' %}" class="theme-btn2">Contact Us<i class="fas fa-circle-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+    
+                        
+                    </div>
+                    
+                    
+                   
+                    <div class="col-lg-8">
+                        <div class="country-details">
+                            <!-- Main Image -->
+                            
+                                {% if country.video %}
+                                    <div class="mb-20">
+                                        <video width="100%" height="auto" controls>
+                                            <source src="{{ country.video.url }}" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                {% endif %}
+                    
+                            <!-- Content -->
+                            <div class="content">
+                                <h3 class="mb-20">{{ country.country_name }}</h3>
+                    
+                              
+                    
+                                {% if country.study_details %}
+                                    <p class="mb-20">{{ country.study_details|safe }}</p>
+                                {% endif %}
+                    
+                                {% comment %} <div class="row">
+                                    <div class="col-md-6 mb-20">
+                                        {% if country.country_logo %}
+                                            <img src="{{ country.country_logo.url }}" alt="Logo">
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-md-6 mb-20">
+                                        {% if country.country_image %}
+                                            <img src="{{ country.country_image.url }}" alt="Country Image">
+                                        {% endif %}
+                                    </div>
+                                </div> {% endcomment %}
+                    
+                                <div class="mb-30">
+                                    {% if country.main_image %}
+                                        <img src="{{ country.main_image.url }}" alt="{{ country.country_name }}">
+                                    {% else %}
+                                        <img src="{% static 'assets/img/country/default_main.jpg' %}" alt="Default Image">
+                                    {% endif %}
+                                </div>
+                    
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- country-single end -->
+
+    </main>
+
+
+    {% endblock %}

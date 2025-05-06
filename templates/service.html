@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <!-- popup search -->
+    <div class="search-popup">
+        <button class="close-search"><span class="far fa-times"></span></button>
+        <form action="#">
+            <div class="form-group">
+                <input type="search" name="search-field" class="form-control" placeholder="Search Here..." required>
+                <button type="submit"><i class="far fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- popup search end -->
+
+
+    <!-- sidebar-popup -->
+    <div class="sidebar-popup offcanvas offcanvas-end" tabindex="-1" id="sidebarPopup">
+        <div class="offcanvas-header">
+            <a href="index.html" class="sidebar-popup-logo">
+                <img src="{% static 'assets/img/logo/logo.png' %}" alt="">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="far fa-xmark"></i>
+            </button>
+        </div>
+        <div class="sidebar-popup-wrap offcanvas-body">
+            <div class="sidebar-popup-wrap offcanvas-body">
+                <div class="sidebar-popup-content">
+                    <div class="sidebar-popup-about">
+                        <h4>About Us</h4>
+                        <p>Masaco global has a four-decade-long track record of it's parent company</p>
+                    </div>
+                    <div class="sidebar-popup-contact">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li>
+                                <div class="icon">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Email</h6>
+                                    <a href="mailto:info@masacoglobal.com">info@masacoglobal.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Phone</h6>
+                                    <a href="tel:+91 9895927770">+91 9895927770
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="far fa-location-dot"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Address 1</h6>
+                                    <a href="{% url 'contact' %}">KOCHI: Palal Tower, MG Road, Ernakulam, Kerala 682015<br>
+                                    </a>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="far fa-location-dot"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Address 2</h6>
+                                    <a href="{% url 'contact' %}">KOTTAYAM: Srinikethan GALLERIA, First floor,  Changanassery<br>
+                                    </a>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="far fa-location-dot"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Address 3</h6>
+                                    <a href="{% url 'contact' %}">DUBAI: Academic City, Building No.12, Office 306, UAE<br>
+                                    </a>
+                                </div>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-popup-social">
+                        <h4>Follow Us</h4>
+                        <a href="https://www.facebook.com/masaco.global/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@masaco.global"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/masaco.global/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/eduomania?originalSubdomain=in"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar-popup end -->
+
+
+    <main class="main">
+
+        <!-- breadcrumb -->
+        <div class="site-breadcrumb" style="background: url(static/assets/img/breadcrumb/01.jpg)">
+            <div class="container">
+                <h2 class="breadcrumb-title">Services</h2>
+                <ul class="breadcrumb-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Services</li>
+                </ul>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+
+
+        <!-- service area -->
+        <div class="service-area bg py-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto wow fadeInDown" data-wow-delay=".25s">
+                        <div class="site-heading text-center">
+                            <span class="site-title-tagline"><i class="far fa-passport"></i> Our Services</span>
+                            <h2 class="site-title">We Believe Everyone Deserves <span>Our Quality</span> Services</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-wrap wow fadeInUp" data-wow-delay=".25s">
+                    <div class="row g-4 g-lg-0">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="service-item">
+                                <span class="count">01</span>
+                                <div class="service-icon">
+                                    <img src="{% static 'assets/img/icon/visa.svg' %}" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h4 class="service-title">
+                                        <a href="{% url 'contact' %}">In-depth Counselling</a>
+                                    </h4>
+                                    <p class="service-text">
+                                        Our student counselling team will provide details about the universities and courses that best suit a student's choice of study to build a career.
+                                    </p>
+                                    <a href="{% url 'contact' %}" class="theme-btn">Details<i class="fas fa-circle-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="service-item">
+                                <span class="count">02</span>
+                                <div class="service-icon">
+                                    <img src="{% static 'assets/img/icon/travel-insurance.svg' %}" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h4 class="service-title">
+                                        <a href="{% url 'contact' %}">Coaching</a>
+                                    </h4>
+                                    <p class="service-text">
+                                        We provide coaching for the following tests: IELTS, PTE, OET and GERMAN. We also provide Mock Visa interview preparation and pre-departure orientation.
+                                    </p>
+                                    <a href="{% url 'contact' %}" class="theme-btn">Details<i class="fas fa-circle-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="service-item">
+                                <span class="count">03</span>
+                                <div class="service-icon">
+                                    <img src="{% static 'assets/img/icon/work-permit.svg' %}" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h4 class="service-title">
+                                        <a href="{% url 'contact' %}">Mock Visa Interview Preparation</a>
+                                    </h4>
+                                    <p class="service-text">
+                                        We will provide guidance on being prepared for a visa interview and also organize a pre-departure briefing for the students.
+                                    </p>
+                                    <a href="{% url 'contact' %}" class="theme-btn">Details<i class="fas fa-circle-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="service-item">
+                                <span class="count">04</span>
+                                <div class="service-icon">
+                                    <img src="{% static 'assets/img/icon/flight-booking.svg' %}" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h4 class="service-title">
+                                        <a href="{% url 'contact' %}">Education Loan Assistance</a>
+                                    </h4>
+                                    <p class="service-text">
+                                        Based on your financial background, we provide assistance to procure an educational loan to study abroad.
+                                    </p>
+                                    <a href="{% url 'contact' %}" class="theme-btn">Details<i class="fas fa-circle-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="service-item">
+                                <span class="count">05</span>
+                                <div class="service-icon">
+                                    <img src="{% static 'assets/img/icon/residency.svg' %}" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h4 class="service-title">
+                                        <a href="{% url 'contact' %}">100% Travel Services.</a>
+                                    </h4>
+                                    <p class="service-text">
+                                        Students will receive complete travel assistance as per requirement ;from booking flight tickets and travel insurance to applying for Global SIM cards.
+                                    </p>
+                                    <a href="{% url 'contact' %}" class="theme-btn">Details<i class="fas fa-circle-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="service-item">
+                                <span class="count">06</span>
+                                <div class="service-icon">
+                                    <img src="{% static 'assets/img/icon/family.svg' %}" alt="">
+                                </div>
+                                <div class="service-content">
+                                    <h4 class="service-title">
+                                        <a href="{% url 'contact' %}">Visa Assistance</a>
+                                    </h4>
+                                    <p class="service-text">
+                                        We have a dedicated team of professionals who will assist you with Visa documentation and relocation as per your requirements.
+                                    </p>
+                                    <a href="{% url 'contact' %}" class="theme-btn">Details<i class="fas fa-circle-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- service area end -->
+
+    </main>
+
+
+    <!-- footer area -->
+    {% endblock %}

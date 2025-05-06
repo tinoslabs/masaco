@@ -1,0 +1,670 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <!-- popup search -->
+    <div class="search-popup">
+        <button class="close-search"><span class="far fa-times"></span></button>
+        <form action="#">
+            <div class="form-group">
+                <input type="search" name="search-field" class="form-control" placeholder="Search Here..." required>
+                <button type="submit"><i class="far fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- popup search end -->
+
+
+    <!-- sidebar-popup -->
+    <div class="sidebar-popup offcanvas offcanvas-end" tabindex="-1" id="sidebarPopup">
+        <div class="offcanvas-header">
+            <a href="index.html" class="sidebar-popup-logo">
+                <img src="{% static 'assets/img/logo/logo-1.png' %}" alt="">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="far fa-xmark"></i>
+            </button>
+        </div>
+        <div class="sidebar-popup-wrap offcanvas-body">
+            <div class="sidebar-popup-wrap offcanvas-body">
+                <div class="sidebar-popup-content">
+                    <div class="sidebar-popup-about">
+                        <h4>About Us</h4>
+                        <p>Masaco global has a four-decade-long track record of it's parent company</p>
+                    </div>
+                    <div class="sidebar-popup-contact">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li>
+                                <div class="icon">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Email</h6>
+                                    <a href="mailto:info@masacoglobal.com">info@masacoglobal.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Phone</h6>
+                                    <a href="tel:+91 9895927770">+91 9895927770
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="far fa-location-dot"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Address 1</h6>
+                                    <a href="{% url 'contact' %}">KOCHI: Palal Tower, MG Road, Ernakulam, Kerala 682015<br>
+                                    </a>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="far fa-location-dot"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Address 2</h6>
+                                    <a href="{% url 'contact' %}">KOTTAYAM: Srinikethan GALLERIA, First floor,  Changanassery<br>
+                                    </a>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="far fa-location-dot"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Address 3</h6>
+                                    <a href="{% url 'contact' %}">DUBAI: Academic City, Building No.12, Office 306, UAE<br>
+                                    </a>
+                                </div>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-popup-social">
+                        <h4>Follow Us</h4>
+                        <a href="https://www.facebook.com/masaco.global/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@masaco.global"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/masaco.global/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/eduomania?originalSubdomain=in"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar-popup end -->
+
+
+    <main class="main">
+
+        <!-- hero area -->
+        <div class="hero-section">
+            <div class="hero-slider owl-carousel">
+                <div class="hero-single" style="background-image: url(static/assets/img/b1.jpg);">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-12 col-lg-7 mx-auto">
+                                <div class="hero-content text-center">
+                                    <h6 class="hero-sub-title mx-auto" data-animation="fadeInUp" data-delay=".25s">
+                                        <i class="far fa-passport"></i> Trust To Fly!
+                                    </h6>
+                                    <h1 class="hero-title" data-animation="fadeInRight" data-delay=".50s">
+                                       Endless <span>Possibilities to secure</span> your future...
+                                    </h1>
+                                    <p data-animation="fadeInLeft" data-delay=".75s">
+                                        TEmbark on your journey abroad with confidence, unlocking new academic and career possibilities with ease.
+                                    </p>
+                                    <div class="hero-btn justify-content-center" data-animation="fadeInUp" data-delay="1s">
+                                        <a href="{% url 'about' %}" class="theme-btn">About More<i
+                                                class="fas fa-circle-arrow-right"></i></a>
+                                        <a href="{% url 'contact' %}" class="theme-btn2">Learn More<i
+                                                class="fas fa-circle-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-single" style="background-image: url(static/assets/img/b2.jpg);">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-12 col-lg-7 mx-auto">
+                                <div class="hero-content text-center">
+                                    <h6 class="hero-sub-title mx-auto" data-animation="fadeInUp" data-delay=".25s">
+                                        <i class="far fa-passport"></i> Trust To Fly!
+                                    </h6>
+                                    <h1 class="hero-title" data-animation="fadeInRight" data-delay=".50s">
+                                       Make your first step <span>towards living</span> your dream...
+                                    </h1>
+                                    <p data-animation="fadeInLeft" data-delay=".75s">
+                                        Begin exploring study options abroad with trusted guidance to reach your goals confidently and smoothly.
+                                    </p>
+                                    <div class="hero-btn justify-content-center" data-animation="fadeInUp" data-delay="1s">
+                                        <a href="{% url 'about' %}" class="theme-btn">About More<i
+                                                class="fas fa-circle-arrow-right"></i></a>
+                                        <a href="{% url 'contact' %}" class="theme-btn2">Learn More<i
+                                                class="fas fa-circle-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-single" style="background-image: url(static/assets/img/b3.jpg);">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-12 col-lg-7 mx-auto">
+                                <div class="hero-content text-center">
+                                    <h6 class="hero-sub-title mx-auto" data-animation="fadeInUp" data-delay=".25s">
+                                        <i class="far fa-passport"></i>Trust To Fly!
+                                    </h6>
+                                    <h1 class="hero-title" data-animation="fadeInRight" data-delay=".50s">
+                                        Choose your journey wisely <span>and build the</span> right career...
+                                    </h1>
+                                    <p data-animation="fadeInLeft" data-delay=".75s">
+                                        Start your journey today to achieve academic excellence and a rewarding international career path.
+                                    </p>
+                                    <div class="hero-btn justify-content-center" data-animation="fadeInUp" data-delay="1s">
+                                        <a href="{% url 'about' %}" class="theme-btn">About More<i
+                                                class="fas fa-circle-arrow-right"></i></a>
+                                        <a href="{% url 'contact' %}" class="theme-btn2">Learn More<i
+                                                class="fas fa-circle-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- hero area end -->
+
+
+        <!-- apply area -->
+       
+
+
+        <!-- about area -->
+        <div class="about-area py-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="about-left wow fadeInLeft" data-wow-delay=".25s">
+                            <div class="about-img">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img class="img-1" src="{% static 'assets/img/011.jpg' %}" alt="">
+                                        <img class="shape" src="{% static 'assets/img/shape/02.png' %}" alt="">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="about-experience">
+                                            <h5>45<span>+</span></h5>
+                                            <p>Years Of Experience</p>
+                                        </div>
+                                        <img class="img-2" src="{% static 'assets/img/022.jpg' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-right wow fadeInUp" data-wow-delay=".25s">
+                            <div class="site-heading mb-3">
+                                <span class="site-title-tagline"><i class="far fa-passport"></i> About Us</span>
+                                <h2 class="site-title"> One Stop Solution<span>For All Your</span> Study Abroad Needs</h2>
+                            </div>
+                           
+                            <p class="about-text">We have a proven track record of providing the best service to our customers throughout the last two decades in the field of study abroad services. We ensure that you get a very factual comparative analysis of the higher educational opportunities across the globe. Aspiring to be one of the topmost service organisations in the overseas education sector, we provide you the best services.</p>
+                            <div class="about-content">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <div class="about-item">
+                                            <div class="icon">
+                                                <img src="{% static 'assets/img/icon/accurate.svg' %}" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h6>95% success rates</h6>
+                                                <p>Trusted by students worldwide for turning aspirations into international achievements.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="about-item">
+                                            <div class="icon">
+                                                <img src="{% static 'assets/img/icon/support.svg' %}" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h6>24/7 Live Online Support</h6>
+                                                <p>It is a long established fact that a reader will be distracted.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                             
+                            </div>
+                            <a href="{% url 'about' %}" class="theme-btn">Discover More<i class="fas fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+
+
+        <!-- counter area -->
+        <div class="counter-area">
+            <div class="counter-wrap">
+                <div class="shape">
+                    <img src="{% static 'assets/img/shape/03.png' %}" alt="">
+                </div>
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="counter-box">
+                                <div class="icon">
+                                    <img src="{% static 'assets/img/icon/visa.svg' %}" alt="">
+                                </div>
+                                <div>
+                                    <span class="counter" data-count="+" data-to="6560" data-speed="3000">6560</span>
+                                    <h6 class="title">+ Consulting</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="counter-box mt-lg-5">
+                                <div class="icon">
+                                    <img src="{% static 'assets/img/icon/happy.svg' %}" alt="">
+                                </div>
+                                <div>
+                                    <span class="counter" data-count="+" data-to="7320" data-speed="3000">7320</span>
+                                    <h6 class="title">+ Happy Studets</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="counter-box">
+                                <div class="icon">
+                                    <img src="{% static 'assets/img/icon/country.svg' %}" alt="">
+                                </div>
+                                <div>
+                                    <span class="counter" data-count="+" data-to="190" data-speed="3000">190</span>
+                                    <h6 class="title">+ Total Country</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="counter-box mt-lg-5">
+                                <div class="icon">
+                                    <img src="{% static 'assets/img/icon/award.svg' %}" alt="">
+                                </div>
+                                <div>
+                                    <span class="counter" data-count="+" data-to="50" data-speed="3000">50</span>
+                                    <h6 class="title">+ Win Awards</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- counter area end -->
+
+
+        <!-- visa area -->
+        <div class="visa-area bg pt-80 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto wow fadeInDown" data-wow-delay=".25s">
+                        <div class="site-heading text-center">
+                            <span class="site-title-tagline"><i class="far fa-passport"></i> Our Services</span>
+                            <h2 class="site-title">What We <span>Offer</span> </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="visa-wrap wow fadeInUp" data-wow-delay=".25s">
+                    <div class="visa-slider owl-carousel">
+                        {% for s in service %}
+                        <div class="visa-item">
+                            <span class="count">{{ forloop.counter|add:"0"|slice:"-2" }}</span> <!-- 01, 02, etc -->
+                            <div class="visa-content">
+                                <div class="visa-icon">
+                                    <!-- Optional: Replace with static icon or add an icon field in model -->
+                                    <img src="{% static 'assets/img/icon/student-visa.svg' %}" alt="">
+                                </div>
+                                <div class="visa-info">
+                                    <h4 class="visa-title">
+                                        <a href="#">{{ s.heading }}</a>
+                                    </h4>
+                                    <p class="visa-text">
+                                        {{ s.details|safe|truncatechars:120 }}
+                                    </p>
+                                    {% comment %} {% if s.service_pdf %}
+                                    <a href="{{ s.service_pdf.url }}" target="_blank" class="theme-btn">
+                                        Download Brochure <i class="fas fa-circle-arrow-right"></i>
+                                    </a>
+                                    {% endif %} {% endcomment %}
+                                    
+                                    <a href="{% url 'service_details' s.id %}" target="_blank" class="theme-btn">
+                                        Details <i class="fas fa-circle-arrow-right"></i>
+                                    </a>
+                                   
+                                </div>
+                            </div>
+                            <div class="visa-img">
+                                <img src="{{ s.main_image.url }}" alt="{{ s.heading }}">
+                            </div>
+                        </div>
+                        {% empty %}
+                        <p>No services available at the moment.</p>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- visa area end -->
+
+
+        <!-- country area -->
+        <div class="country-area">
+            <div class="country-bg" style="background-image: url(static/assets/img/bg.jpg);"></div>
+            <div class="container pt-80">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                            <span class="site-title-tagline"><i class="far fa-passport"></i> Country We Offer</span>
+                            <h2 class="site-title text-white">Let's Check Country We Offer For You</h2>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="country-wrap">
+                    <div class="row g-4 wow fadeInUp" data-wow-delay=".25s">
+                        {% for country in abroad %}
+                        <div class="col-md-6 col-lg-4">
+                            <div class="country-item">
+                                <div class="country-img">
+                                    {% if country.country_logo %}
+                                        <img src="{{ country.country_logo.url }}" alt="{{ country.country_name }}">
+                                    {% else %}
+                                        <img src="{% static 'assets/img/default-country.png' %}" alt="Default Country">
+                                    {% endif %}
+                                </div>
+                                <div class="country-content">
+                                    <h4><a href="{% url 'country_details' country.id %}">{{ country.country_name }}</a></h4>
+                                    <p>{{ country.country_description|truncatewords:15 }}</p>
+                                    <a href="{% url 'country_details' country.id %}" class="theme-btn">Details<i class="fas fa-circle-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                            <p class="text-center">No countries available at the moment.</p>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- country area end -->
+
+
+        <!-- pricing area -->
+        
+        <!-- pricing area end -->
+
+
+        <!-- team-area -->
+        <div class="team-area py-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                            <span class="site-title-tagline"><i class="far fa-passport"></i> Our Team</span>
+                            <h2 class="site-title">Meet With Our <span>Awesome Team</span> Members</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    {% for member in team %}
+                        <div class="col-md-6 col-lg-3">
+                            <div class="team-item wow fadeInUp" data-wow-delay=".{{ forloop.counter }}s">
+                                <div class="team-img">
+                                    <img src="{{ member.image.url }}" alt="{{ member.name }}">
+                                </div>
+                                <div class="team-content">
+                                    <h4><a href="#">{{ member.name }}</a></h4>
+                                    <span>{{ member.designation }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- team-area end -->
+
+
+        <!-- coaching area -->
+        <div class="coaching-area pt-60 pb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                            <span class="site-title-tagline"><i class="far fa-passport"></i> Our Coaching</span>
+                            <h2 class="site-title">Get Best Coaching From Us</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="coaching-slider owl-carousel">
+                    {% for item in training %}
+                    <div class="coaching-item">
+                        
+                        <div class="coaching-img">
+                            <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                        </div>
+                        <div class="coaching-content">
+                            <div class="coaching-meta">
+                                <span><i class="far fa-clock"></i> {{ item.duration_months }} Months</span>
+                                <span><i class="far fa-book"></i> {{ item.total_classes }} Classes</span>
+                            </div>
+                            <h4><a href="{% url 'coaching_details' item.pk %}">{{ item.title }}</a></h4>
+                            <p>{{ item.description|truncatewords:15 }}</p>
+                        </div>
+                        <div class="coaching-bottom">
+                            <div class="coaching-rating">
+                                <i class="fas fa-star"></i><span> (4.0)</span> <!-- Static rating; you can make this dynamic -->
+                            </div>
+                            <a href="{% url 'coaching_details' item.pk %}" class="theme-btn">Details<i class="fas fa-circle-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+        <!-- coaching area end -->
+
+
+        <!-- choose area -->
+        <div class="choose-area py-100">
+            <div class="container">
+                <div class="row g-4 g-lg-5">
+                    <div class="col-lg-6">
+                        <div class="wow fadeInUp" data-wow-delay=".25s">
+                            <div class="site-heading mb-0">
+                                <span class="site-title-tagline"><i class="far fa-passport"></i> Why Choose Us</span>
+                                <h2 class="site-title">Trusted And <span>Experienced </span>Academy</h2>
+                                <p>
+                                    A trusted and experienced language institute dedicated to providing high-quality language training, expert instructors, and a supportive learning environment to help learners achieve fluency and confidence.
+                                </p>
+                            </div>
+                            <div class="choose-img">
+                                <img src="{% static 'assets/img/012.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row g-4 wow fadeInRight" data-wow-delay=".25s">
+                            <div class="col-md-6 mt-lg-5">
+                                <div class="choose-item">
+                                    <span class="count">01</span>
+                                    <div class="choose-item-icon">
+                                        <img src="{% static 'assets/img/icon/team.svg' %}" alt="">
+                                    </div>
+                                    <div class="choose-item-info">
+                                        <h4>Experienced Team</h4>
+                                        <p>A skilled team of professionals committed to your success at every step abroad.</p>
+                                    </div>
+                                </div>
+                                <div class="choose-item">
+                                    <span class="count">02</span>
+                                    <div class="choose-item-icon">
+                                        <img src="{% static 'assets/img/icon/quality-service.svg' %}" alt="">
+                                    </div>
+                                    <div class="choose-item-info">
+                                        <h4>Quality Services</h4>
+                                        <p>Our team ensures top-notch guidance and care throughout your entire study journey.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="choose-item">
+                                    <span class="count">03</span>
+                                    <div class="choose-item-icon">
+                                        <img src="{% static 'assets/img/icon/accurate-guidance.svg' %}" alt="">
+                                    </div>
+                                    <div class="choose-item-info">
+                                        <h4>Easy & fast process</h4>
+                                        <p>Experience a smooth and efficient process from consultation to admission.</p>
+                                    </div>
+                                </div>
+                                <div class="choose-item">
+                                    <span class="count">04</span>
+                                    <div class="choose-item-icon">
+                                        <img src="{% static 'assets/img/icon/immigration.svg' %}" alt="">
+                                    </div>
+                                    <div class="choose-item-info">
+                                        <h4>95% success rates</h4>
+                                        <p>Trusted by students worldwide for turning aspirations into international achievements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- choose area end -->
+
+
+        <!-- testimonial-area -->
+        <div class="testimonial-area testimonial-bg pt-80 pb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                            <span class="site-title-tagline"><i class="far fa-passport"></i> Testimonials</span>
+                            <h2 class="site-title text-white">What Our Amazing Students Say About Us</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slider owl-carousel owl-theme wow fadeInUp" data-wow-delay=".25s">
+                    {% for review in reviews %}
+                    <div class="testimonial-item">
+                        <div class="testimonial-quote-icon">
+                            <img src="{% static 'assets/img/icon/quote.svg' %}" alt="">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-author-img">
+                                <img src="{{ review.image.url }}" alt="{{ review.name }}">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>{{ review.name }}</h4>
+                                <p>{{ review.designation }}</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote">
+                            <p>{{ review.message }}</p>
+                        </div>
+                        <div class="testimonial-rate">
+                            {% for i in "12345"|make_list %}
+                                {% if forloop.counter <= review.rating %}
+                                    <i class="fas fa-star text-warning"></i>
+                                {% else %}
+                                    <i class="far fa-star text-warning"></i>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                
+            </div>
+        </div>
+        <!-- testimonial-area end -->
+
+
+        <!-- blog-area -->
+        <div class="blog-area py-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                            <span class="site-title-tagline"><i class="far fa-passport"></i> Our Blog</span>
+                            <h2 class="site-title">Our Latest News & <span>Blog</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    {% for data in blog %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="blog-item wow fadeInUp" data-wow-delay=".{{ forloop.counter }}s">
+                            <div class="blog-date">
+                                <strong>{{ data.date.day }}</strong>
+                                <span>{{ data.date|date:"M" }}</span>
+                            </div>
+                            <div class="blog-item-img">
+                                <img src="{{ data.main_image.url }}" alt="Blog Image" style="height: 250px; object-fit: cover;">
+                            </div>
+                            <div class="blog-item-info">
+                                <h4 class="blog-title">
+                                    <a href="#">{{ data.blog_heading }}</a>
+                                </h4>
+                                <p>{{ data.blog_details|truncatewords:20|safe }}</p>
+                                <a class="theme-btn" href="{% url 'blog_details' data.id %}">Read More <i class="fas fa-circle-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+        <!-- blog-area end -->
+
+
+        <!-- partner area -->
+        <div class="partner-area bg pt-40 pb-40">
+            <div class="container">
+                <div class="partner-wrapper partner-slider owl-carousel owl-theme">
+                    {% for partner in partners %}
+                        <img src="{{ partner.logo.url }}" alt="{{ partner.name }}">
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- partner area end-->
+
+    </main>
+
+    {% endblock %}

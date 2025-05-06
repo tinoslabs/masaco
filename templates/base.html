@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- title -->
+    <title>Masaco Global</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="assets/image/x-icon" href="{% static 'assets/img/logo/logo-1.png' %}">
+
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/all-fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- preloader end -->
+
+
+    <!-- header area -->
+    <header class="header">
+
+        <!-- header top -->
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-wrap">
+                    <div class="header-top-left">
+                        <div class="header-top-list">
+                            <ul>
+                                <li><a href="mailto:info@example.com"><i class="far fa-envelopes"></i>
+                                    info@masacoglobal.com</a></li>
+                                <li><a href="tel:+21236547898"><i class="far fa-phone-volume"></i> +91 9895927770</a>
+                                </li>
+                                <li><a href="{% url 'contact' %}"><i class="far fa-earth"></i> KOCHI | KOTTAYAM | DUBAI</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-top-right">
+                    
+                        
+                        <div class="header-top-social">
+                            <span>Follow Us: </span>
+                            <a href="https://www.facebook.com/masaco.global/"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.youtube.com/@masaco.global"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/masaco.global/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/eduomania?originalSubdomain=in"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header top end -->
+
+        <!-- navbar -->
+        <div class="main-navigation">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container position-relative">
+                    <a class="navbar-brand" href="{% url 'index' %}">
+                        <img src="{% static 'assets/img/logo/logo-1.png' %}" alt="logo">
+                    </a>
+                    <div class="mobile-menu-right">
+                        <div class="mobile-menu-btn">
+                            <button type="button" class="nav-right-link search-box-outer"><i
+                                    class="far fa-search"></i></button>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                            aria-label="Toggle navigation">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <a href="{% url 'index' %}" class="offcanvas-brand" id="offcanvasNavbarLabel">
+                                <img src="{% static 'assets/img/logo/logo-1.png' %}" alt="">
+                            </a>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                                    class="far fa-xmark"></i></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link active" href="{% url 'index' %}"
+                                        data-bs-toggle="dropdown">Home</a>
+                                    
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'coaching' %}"> Academy</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'country' %}">Country</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                            <!-- nav-right -->
+                            <div class="nav-right">
+                                <div class="search-btn">
+                                    <button type="button" class="nav-right-link search-box-outer"><i
+                                            class="far fa-search"></i></button>
+                                </div>
+                                <div class="nav-btn">
+                                    <a href="{% url 'contact' %}" class="theme-btn">Let's Talk<i
+                                            class="fas fa-circle-arrow-right"></i></a>
+                                </div>
+                                <button type="button" class="sidebar-btn nav-right-link" data-bs-toggle="offcanvas"
+                                    data-bs-target="#sidebarPopup">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- navbar end-->
+
+    </header>
+    <!-- header area end -->
+
+    {% block content%}
+    {% endblock %}
+
+    <!-- footer area -->
+    <footer class="footer-area">
+        <div class="footer-shape">
+            <img src="{% static 'assets/img/shape/01.png' %}" alt="">
+        </div>
+        <div class="footer-widget">
+            <div class="container">
+                <div class="footer-widget-wrap pt-100 pb-80">
+                    <div class="row g-4">
+                        <div class="col-lg-5">
+                            <div class="footer-widget-box about-us">
+                                <a href="{% url 'index' %}" class="footer-logo">
+                                    <img src="{% static 'assets/img/logo/logo-light.png' %}" alt="">
+                                </a>
+                                <p class="mb-4">
+                                    We are always availed to consult on taking your higher education to the next level so you can stay competitive in the global world.
+
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <div class="footer-widget-box list">
+                                <h4 class="footer-widget-title">Company</h4>
+                                <ul class="footer-list">
+                                    <li><a href="{% url 'about' %}"><i class="far fa-angle-double-right"></i>About Us</a></li>
+                                    <li><a href="{% url 'blog' %}"><i class="far fa-angle-double-right"></i> blog</a></li>
+                                   
+                                    {% comment %} <li><a href="{% url 'contact' %}"><i class="far fa-angle-double-right"></i>Contact Us</a></li> {% endcomment %}
+                                    <li><a href="{% url 'service' %}"><i class="far fa-angle-double-right"></i> Service</a></li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <div class="footer-widget-box list">
+                                <h4 class="footer-widget-title">Studies</h4>
+                                <ul class="footer-list">
+                                    <li><a href="{% url 'country' %}"><i class="far fa-angle-double-right"></i>Countries</a></li>
+                                    <li><a href="{% url 'coaching' %}"><i class="far fa-angle-double-right"></i>Coachings</a></li>
+                                    <li><a href="{% url 'contact' %}"><i class="far fa-angle-double-right"></i>Contact</a></li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="footer-widget-box">
+                                <h4 class="footer-widget-title">Get In Touch</h4>
+                                <ul class="footer-contact">
+                                    {% comment %} <li>
+                                        <div class="icon">
+                                            <i class="far fa-location-dot"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h6>Our Address</h6>
+                                            <p>25/AB Milford Road, New York, USA</p>
+                                        </div>
+                                    </li> {% endcomment %}
+                                    <li>
+                                        <div class="icon">
+                                            <i class="far fa-phone"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h6>Call Us</h6>
+                                            <a href="tel:+91 9895927770">+91 9895927770</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="far fa-envelope"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h6>Mail Us</h6>
+                                            <a href="mailto:info@masacoglobal.com">info@masacoglobal.com</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <p class="copyright-text">
+                            &copy; Copyright <span id="date"></span> <a href="#"> Masaco Global </a>.Designed and Developed by  <span id="date"></span> <a href="https://tinos.co.in/">Tinos Software and Security Solutions LLP</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6 align-self-center">
+                        <ul class="footer-social">
+                            <li><a href="https://www.facebook.com/masaco.global/"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/masaco.global/"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/eduomania?originalSubdomain=in"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.youtube.com/@masaco.global"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+
+    <!-- scroll-top -->
+    <a href="#" id="scroll-top"><i class="far fa-arrow-up"></i></a>
+    <!-- scroll-top end -->
+
+
+    <!-- js -->
+    <script src="{% static 'assets/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/modernizr.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.appear.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/counter-up.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

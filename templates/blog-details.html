@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+    <!-- popup search -->
+    <div class="search-popup">
+        <button class="close-search"><span class="far fa-times"></span></button>
+        <form action="#">
+            <div class="form-group">
+                <input type="search" name="search-field" class="form-control" placeholder="Search Here..." required>
+                <button type="submit"><i class="far fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- popup search end -->
+
+
+    <!-- sidebar-popup -->
+    <div class="sidebar-popup offcanvas offcanvas-end" tabindex="-1" id="sidebarPopup">
+        <div class="offcanvas-header">
+            <a href="index.html" class="sidebar-popup-logo">
+                <img src="{% static 'assets/img/logo/logo.png' %}" alt="">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="far fa-xmark"></i>
+            </button>
+        </div>
+        <div class="sidebar-popup-wrap offcanvas-body">
+            <div class="sidebar-popup-content">
+                <div class="sidebar-popup-about">
+                    <h4>About Us</h4>
+                    <p>Masaco global has a four-decade-long track record of it's parent company</p>
+                </div>
+                <div class="sidebar-popup-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-envelope"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Email</h6>
+                                <a href="mailto:info@masacoglobal.com">info@masacoglobal.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-phone"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Phone</h6>
+                                <a href="tel:+91 9895927770">+91 9895927770
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-location-dot"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Address 1</h6>
+                                <a href="{% url 'contact' %}">KOCHI: Palal Tower, MG Road, Ernakulam, Kerala 682015<br>
+                                </a>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-location-dot"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Address 2</h6>
+                                <a href="{% url 'contact' %}">KOTTAYAM: Srinikethan GALLERIA, First floor,  Changanassery<br>
+                                </a>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-location-dot"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Address 3</h6>
+                                <a href="{% url 'contact' %}">DUBAI: Academic City, Building No.12, Office 306, UAE<br>
+                                </a>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-popup-social">
+                    <h4>Follow Us</h4>
+                    <a href="https://www.facebook.com/masaco.global/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@masaco.global"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/masaco.global/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/eduomania?originalSubdomain=in"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar-popup end -->
+
+
+    <main class="main">
+
+        <!-- breadcrumb -->
+        <div class="site-breadcrumb" style="background: url('{% static "assets/img/breadcrumb/01.jpg" %}')">
+            <div class="container">
+                <h2 class="breadcrumb-title">Blog Details</h2>
+                <ul class="breadcrumb-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Blog Details</li>
+                </ul>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+
+
+        <!-- blog single -->
+        <div class="blog-single py-100">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="blog-single-wrap">
+                            <div class="blog-single-content">
+                                <div class="blog-thumb-img">
+                                    <img src="{{ blog.main_image.url }}" alt="Blog Image">
+                                </div>
+                                <div class="blog-info">
+                                    <div class="blog-meta">
+                                        <div class="blog-meta-left">
+                                            <ul>
+                                                <li><i class="far fa-user"></i><a href="">Admin</a></li>
+                                                <li><i class="far fa-calendar-alt"></i> {{ blog.date }}</li>
+                                            </ul>
+                                        </div>
+                                        <div class="blog-meta-right">
+                                            <a href="#" class="share-link"><i class="far fa-share-alt"></i>Share</a>
+                                        </div>
+                                    </div>
+                                    <div class="blog-details">
+                                        <h3 class="blog-details-title mb-20">{{ blog.blog_heading }}</h3>
+                                        <p class="mb-10">
+                                            {{ blog.blog_details|safe|linebreaks }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <aside class="blog-sidebar">
+                            <!-- search-->
+                            
+
+                            <!-- category -->
+                            
+                            <!-- recent post -->
+                            <div class="widget recent-post">
+                                <h5 class="widget-title">Recent Post</h5>
+                                {% for recent in recent_posts %}
+                                    <div class="recent-post-item">
+                                        <div class="recent-post-img">
+                                            <img src="{{ recent.main_image.url }}" alt="{{ recent.blog_heading }}">
+                                        </div>
+                                        <div class="recent-post-info">
+                                            <h6>
+                                                <a href="{% url 'blog_details' recent.id %}">
+                                                    {{ recent.blog_heading|truncatewords:7 }}
+                                                </a>
+                                            </h6>
+                                            <span><i class="far fa-clock"></i>{{ recent.date|date:"M d, Y" }}</span>
+                                        </div>
+                                    </div>
+                                {% empty %}
+                                    <p>No recent posts available.</p>
+                                {% endfor %}
+                            </div>
+                            
+
+                            <!-- social share -->
+                            <div class="widget social">
+                                <h5 class="widget-title">Follow Us</h5>
+                                <div class="social-link">
+                                    <a href="https://www.facebook.com/masaco.global/"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/masaco.global/"><i class="fab fa-instagram"></i></a>
+                                   
+                                    <a href="https://www.linkedin.com/company/eduomania?originalSubdomain=in"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://www.youtube.com/@masaco.global"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Recent Post -->
+                            
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- blog single end --> 
+
+    </main>
+
+
+    {% endblock %}

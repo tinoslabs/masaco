@@ -1,0 +1,350 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+    <!-- popup search -->
+    <div class="search-popup">
+        <button class="close-search"><span class="far fa-times"></span></button>
+        <form action="#">
+            <div class="form-group">
+                <input type="search" name="search-field" class="form-control" placeholder="Search Here..." required>
+                <button type="submit"><i class="far fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- popup search end -->
+
+
+    <!-- sidebar-popup -->
+    <div class="sidebar-popup offcanvas offcanvas-end" tabindex="-1" id="sidebarPopup">
+        <div class="offcanvas-header">
+            <a href="index.html" class="sidebar-popup-logo">
+                <img src="{% static 'assets/img/logo/logo.png' %}" alt="">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="far fa-xmark"></i>
+            </button>
+        </div>
+        <div class="sidebar-popup-wrap offcanvas-body">
+            <div class="sidebar-popup-content">
+                <div class="sidebar-popup-about">
+                    <h4>About Us</h4>
+                    <p>There are many variations of passages available sure there majority have suffered alteration in
+                        some form by inject humour or randomised words which don't look even slightly believable.</p>
+                </div>
+                <div class="sidebar-popup-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-envelope"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Email</h6>
+                                <a href="mailto:info@example.com">info@example.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-phone"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Phone</h6>
+                                <a href="tel:+21236547898">+2 123 654 7898</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-location-dot"></i>
+                            </div>
+                            <div class="content">
+                                <h6>Address</h6>
+                                <a href="#">25/B Milford Road, New York</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-popup-social">
+                    <h4>Follow Us</h4>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar-popup end -->
+
+
+    <main class="main">
+
+        <!-- breadcrumb -->
+        <div class="site-breadcrumb" style="background: url(static/assets/img/breadcrumb/01.jpg)">
+            <div class="container">
+                <h2 class="breadcrumb-title">Testimonials</h2>
+                <ul class="breadcrumb-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Testimonials</li>
+                </ul>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+
+
+        <!-- process area -->
+        <div class="process-area pt-80 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                            <span class="site-title-tagline"><i class="far fa-passport"></i> How It Works</span>
+                            <h2 class="site-title">Easy step to get your visa</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row wow fadeInUp" data-wow-delay=".25s">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="process-item">
+                            <span class="count">01</span>
+                            <div class="process-icon">
+                                <img src="{% static 'assets/img/icon/visa-2.svg' %}" alt="">
+                            </div>
+                            <div class="process-content">
+                                <h4>Choose Your Visa Type</h4>
+                                <p>There are many variations of passages available but the majority have suffered</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="process-item mt-lg-5">
+                            <span class="count">02</span>
+                            <div class="process-icon">
+                                <img src="{% static 'assets/img/icon/agent.svg' %}" alt="">
+                            </div>
+                            <div class="process-content">
+                                <h4>Meet With Our Agent</h4>
+                                <p>There are many variations of passages available but the majority have suffered</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="process-item">
+                            <span class="count">03</span>
+                            <div class="process-icon">
+                                <img src="{% static 'assets/img/icon/document.svg' %}" alt="">
+                            </div>
+                            <div class="process-content">
+                                <h4>Submit Your Documents</h4>
+                                <p>There are many variations of passages available but the majority have suffered</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="process-item mt-lg-5">
+                            <span class="count">04</span>
+                            <div class="process-icon">
+                                <img src="{% static 'assets/img/icon/visa-3.svg' %}" alt="">
+                            </div>
+                            <div class="process-content">
+                                <h4>Get Your Dream Visa</h4>
+                                <p>There are many variations of passages available but the majority have suffered</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- process area end -->
+
+
+        <!-- testimonial-area -->
+        <div class="testimonial-area testimonial-bg pt-80 pb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                            <span class="site-title-tagline"><i class="far fa-passport"></i> Testimonials</span>
+                            <h2 class="site-title text-white">What Our Awesome Clients Say About Us</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slider owl-carousel owl-theme wow fadeInUp" data-wow-delay=".25s">
+                    <div class="testimonial-item">
+                        <div class="testimonial-quote-icon">
+                            <img src="{% static 'assets/img/icon/quote.svg' %}" alt="">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-author-img">
+                                <img src="{% static 'assets/img/testimonial/01.jpg' %}" alt="">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Niesha Phips</h4>
+                                <p>Customer</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote">
+                            <p>
+                                There are many variations passage available the majority have suffered of the alteration in some form by injected humour or randomised words which look even slightly believable.
+                            </p>
+                        </div>
+                        <div class="testimonial-rate">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-quote-icon">
+                            <img src="{% static 'assets/img/icon/quote.svg' %}" alt="">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-author-img">
+                                <img src="{% static 'assets/img/testimonial/02.jpg' %}" alt="">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Daniel Porter</h4>
+                                <p>Customer</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote">
+                            <p>
+                                There are many variations passage available the majority have suffered of the alteration in some form by injected humour or randomised words which look even slightly believable.
+                            </p>
+                        </div>
+                        <div class="testimonial-rate">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-quote-icon">
+                            <img src="assets/img/icon/quote.svg" alt="">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-author-img">
+                                <img src="{% static 'assets/img/testimonial/03.jpg' %}" alt="">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Ebony Swihart</h4>
+                                <p>Customer</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote">
+                            <p>
+                                There are many variations passage available the majority have suffered of the alteration in some form by injected humour or randomised words which look even slightly believable.
+                            </p>
+                        </div>
+                        <div class="testimonial-rate">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-quote-icon">
+                            <img src="{% static 'assets/img/icon/quote.svg' %}" alt="">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-author-img">
+                                <img src="{% static 'assets/img/testimonial/04.jpg' %}" alt="">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Loreta Jones</h4>
+                                <p>Customer</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote">
+                            <p>
+                                There are many variations passage available the majority have suffered of the alteration in some form by injected humour or randomised words which look even slightly believable.
+                            </p>
+                        </div>
+                        <div class="testimonial-rate">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- testimonial-area end -->
+
+
+        <!-- partner-area -->
+        <div class="partner-area py-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="site-heading text-center wow fadeInDown" data-wow-delay=".25s">
+                            <span class="site-title-tagline"><i class="far fa-passport"></i> Our Partners</span>
+                            <h2 class="site-title">Meet With Our <span>Awesome</span> Partners</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center wow fadeInUp" data-wow-delay=".25s">
+                    <div class="col-4 col-lg-2">
+                        <div class="partner-img">
+                            <img src="{% static 'assets/img/partner/01.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <div class="partner-img">
+                            <img src="{% static 'assets/img/partner/02.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <div class="partner-img">
+                            <img src="{% static 'assets/img/partner/03.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <div class="partner-img">
+                            <img src="{% static 'assets/img/partner/04.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <div class="partner-img">
+                            <img src="{% static 'assets/img/partner/05.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <div class="partner-img">
+                            <img src="{% static 'assets/img/partner/06.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <div class="partner-img">
+                            <img src="{% static 'assets/img/partner/04.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <div class="partner-img">
+                            <img src="{% static 'assets/img/partner/02.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <div class="partner-img">
+                            <img src="{% static 'assets/img/partner/03.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- partner-area end -->
+
+    </main>
+
+
+{% endblock %}
