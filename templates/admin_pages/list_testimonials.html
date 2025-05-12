@@ -63,7 +63,7 @@
                   <a href="{% url 'update_testimonial' testimonial.pk %}"><button><i class="mdi mdi-cloud-upload" aria-hidden="true"></i></button></a>
                 </td>
                 <td>
-                  <a href=""><button><i class="mdi mdi-delete" aria-hidden="true"></i></button></a>
+                  <a href="{% url 'delete_testimonial' testimonial.pk %}"><button><i class="mdi mdi-delete" aria-hidden="true"></i></button></a>
                 </td>
               </tr>
             {% endfor %}

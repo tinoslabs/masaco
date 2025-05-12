@@ -16,10 +16,11 @@
     <!-- popup search end -->
 
 
+   
     <!-- sidebar-popup -->
     <div class="sidebar-popup offcanvas offcanvas-end" tabindex="-1" id="sidebarPopup">
         <div class="offcanvas-header">
-            <a href="index.html" class="sidebar-popup-logo">
+            <a href="{% url 'index' %}" class="sidebar-popup-logo">
                 <img src="{% static 'assets/img/logo/logo-1.png' %}" alt="">
             </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -37,7 +38,7 @@
                         <h4>Contact Info</h4>
                         <ul>
                             <li>
-                                <div class="icon">
+                                <div>
                                     <i class="far fa-envelope"></i>
                                 </div>
                                 <div class="content">
@@ -46,7 +47,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="icon">
+                                <div>
                                     <i class="far fa-phone"></i>
                                 </div>
                                 <div class="content">
@@ -56,7 +57,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="icon">
+                                <div>
                                     <i class="far fa-location-dot"></i>
                                 </div>
                                 <div class="content">
@@ -67,7 +68,7 @@
                                 
                             </li>
                             <li>
-                                <div class="icon">
+                                <div>
                                     <i class="far fa-location-dot"></i>
                                 </div>
                                 <div class="content">
@@ -78,7 +79,7 @@
                                 
                             </li>
                             <li>
-                                <div class="icon">
+                                <div>
                                     <i class="far fa-location-dot"></i>
                                 </div>
                                 <div class="content">
@@ -90,11 +91,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="sidebar-popup-social">
-                        <h4>Follow Us</h4>
-                        <a href="https://www.facebook.com/masaco.global/"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.youtube.com/@masaco.global"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.instagram.com/masaco.global/"><i class="fab fa-instagram"></i></a>
+                    <div>
+                        <h4>Follow Us</h4><br>
+                        <a href="https://www.facebook.com/masaco.global/"><i class="fab fa-facebook"></i></a>&nbsp;&nbsp;
+                        <a href="https://www.youtube.com/@masaco.global"><i class="fab fa-youtube"></i></a> &nbsp;&nbsp;
+                        <a href="https://www.instagram.com/masaco.global/"><i class="fab fa-instagram"></i></a> &nbsp;&nbsp;
                         <a href="https://www.linkedin.com/company/eduomania?originalSubdomain=in"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
@@ -102,7 +103,6 @@
         </div>
     </div>
     <!-- sidebar-popup end -->
-
 
     <main class="main">
 

@@ -293,6 +293,7 @@ def update_team(request,id):
     return render(request, 'admin_pages/update_team.html', {'form': form, 'team': team})
 
 
+
 def delete_team(request,id):
     team = TeamMembers.objects.get(id=id)
     team.delete()
@@ -328,7 +329,7 @@ def update_blog(request, id):
 
 
 def delete_blog(request,id):
-    blog = TeamMembers.objects.get(id=id)
+    blog = Blog.objects.get(id=id)
     blog.delete()
     return redirect('view_blog')
 
@@ -361,6 +362,7 @@ def update_service(request, id):
         form = ServiceForm(instance=service)  # <-- fixed from instance=blog
 
     return render(request, 'admin_pages/update_service.html', {'form': form, 'service': service})
+
 
 
 def delete_service(request,id):

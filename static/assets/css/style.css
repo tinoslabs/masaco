@@ -1205,13 +1205,16 @@ label {
   font-size: 14px;
 }
 
+
 @media all and (min-width: 992px) {
+
+
 
   .navbar .nav-item .nav-link {
     margin-right: 22px;
     padding: 30px 0 30px 0;
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-dark);
     text-transform: capitalize;
     position: relative;
@@ -1246,6 +1249,9 @@ label {
   .navbar .nav-item:last-child .nav-link {
     margin-right: 0;
   }
+
+
+  
 
   .navbar .nav-item .dropdown-menu {
     display: block;
@@ -2462,7 +2468,7 @@ label {
   left: 20px;
   font-size: 45px;
   line-height: 35px;
-  font-weight: 800;
+  font-weight: 700;
   color: transparent;
   -webkit-text-stroke: 2px var(--theme-color);
 }
@@ -2533,13 +2539,14 @@ label {
   position: absolute;
   top: 90px;
   left: 20px;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 70px;
-  font-family: var(--heading-font);
-  color: transparent;
-  -webkit-text-stroke: 1px var(--theme-color);
-  opacity: .2;
+  /* font-family: var(--heading-font); */
+  color:#001f3f;/* Changed to your theme color (dark blue) */
+  /* -webkit-text-stroke: 1px var(--theme-color); */
+  opacity: .8;
 }
+
 
 .visa-icon{
   width: 80px;
@@ -3267,9 +3274,9 @@ label {
   left: 20px;
   font-weight: 800;
   font-size: 70px;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--color-dark);
-  opacity: .2;
+  color:#001f3f; /* Changed to your theme color (dark blue) */
+  /* -webkit-text-stroke: 1px var(--color-dark); */
+  opacity: .8;
 }
 
 .service-icon{
@@ -4161,8 +4168,8 @@ label {
   position: relative;
   color: var(--color-dark);
   font-size: 18px;
-  font-style: italic;
-  font-weight: 500;
+  font-style: normal;
+  font-weight: 200;
   z-index: 1;
 }
 
@@ -4496,7 +4503,7 @@ label {
   border-left: 5px solid var(--theme-color);
   padding: 30px;
   font-size: 17px;
-  font-style: italic;
+  font-style: normal;
   margin: 20px 0;
   border-radius: 0px;
   position: relative;

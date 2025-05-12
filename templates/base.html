@@ -41,36 +41,6 @@
     <!-- header area -->
     <header class="header">
 
-        <!-- header top -->
-        <div class="header-top">
-            <div class="container">
-                <div class="header-top-wrap">
-                    <div class="header-top-left">
-                        <div class="header-top-list">
-                            <ul>
-                                <li><a href="mailto:info@example.com"><i class="far fa-envelopes"></i>
-                                    info@masacoglobal.com</a></li>
-                                <li><a href="tel:+21236547898"><i class="far fa-phone-volume"></i> +91 9895927770</a>
-                                </li>
-                                <li><a href="{% url 'contact' %}"><i class="far fa-earth"></i> KOCHI | KOTTAYAM | DUBAI</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="header-top-right">
-                    
-                        
-                        <div class="header-top-social">
-                            <span>Follow Us: </span>
-                            <a href="https://www.facebook.com/masaco.global/"><i class="fab fa-facebook"></i></a>
-                            <a href="https://www.youtube.com/@masaco.global"><i class="fab fa-youtube"></i></a>
-                            <a href="https://www.instagram.com/masaco.global/"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/company/eduomania?originalSubdomain=in"><i class="fab fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- header top end -->
 
         <!-- navbar -->
         <div class="main-navigation">
@@ -103,11 +73,8 @@
                         </div>
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link active" href="{% url 'index' %}"
-                                        data-bs-toggle="dropdown">Home</a>
-                                    
-                                </li>
+                                
+                                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{% url 'coaching' %}"> Academy</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{% url 'country' %}">Country</a></li>
